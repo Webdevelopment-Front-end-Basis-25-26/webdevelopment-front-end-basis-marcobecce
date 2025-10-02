@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl-be">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oefening lijsten</title>
+</head>
+<body>
+    <h1>Deze webpagina bevat voorbeeld van lijsten.</h1>
+
+    <a href="oefening3b.html#top">Klik hier om meer te weten over tabellen</a>
+
+    <h1>Ongenummerde lijsten</h1>
+
+    <p>De volgende van de ingrediënten van een recept zijn niet van belang </p>
+
+    <ul>
+        <li>200gr Bloem</li>
+        <li>4 Eieren</li>
+        <li>&frac12; liter melk</li>
+    </ul>
+
+    <h1>Genummerde lijsten</h1>
+
+    <p>De volgende van de handelingen van het recept zijn vaak wel belangerijk</p>
+
+    <ol>
+        <li>Doe de bloem in de kom.</li>
+        <li>Voeg hier de Eieren aan toe en meng het beslag.</li>
+        <li>Voeg onder voortdurend roeren de melk toe.</li>
+    </ol>
+
+    <h1>Genummerde lijsten met letters start vanaf C zonder klinkers</h1>
+
+    <ol type="A" start="3">
+        <li>Begin met de letter C</li>
+        <li>Ga dan gewoon verder met D</li>
+        <li value="6">Maar sla E over en ga dus meteen naar F</li>
+        <li>Om dan terug gewoon te vervolgen met G</li>
+
+    </ol>
+
+    <h1>Ongenummerde lijsten met subonderwerpen</h1>
+
+    <ul>
+        <li>Wat betekent <dfn>hogeschool</dfn></li>
+        <li>
+            <abbr title="UC Leuven-Limburg">UCLL</abbr> staat voor 
+            <ul>
+                <li>University College</li>
+                <li>Leuven</li>
+                <li>Limburg</li>
+            </ul>
+        </li>
+        <li>
+            <abbr title="individueel Studieprogramma">ISP</abbr> staat voor
+            <ul>
+                <li>Individueel</li>
+                <li>Studieprogramma</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h1>Geneste lijsten</h1>
+
+    <p>Er bestaan verschillende soorten koppelingen</p>
+
+    <ol type="I">
+        <li>
+            Absolute koppelingen
+            <ol type="a">
+                <li>
+                    naar externe webpagina's
+                    <ol>
+                        <li>of ankerposities op externe webpagina's</li>
+                    </ol>
+                </li>
+                <li>
+                    naar externe figuren
+                </li>
+            </ol>
+        </li>
+        <li>
+            Relatieve koppelingen
+            <ol type="a">
+                <li>Naar webpagina's binnen eigen website</li>
+                <li>
+                    Naar ankerposities
+                    <ul>
+                        <li>op dezelfde pagina</li>
+                        <li>op andere pagina's</li>
+                    </ul>
+                </li>
+                <li>Naar figuren binnen eigen website</li>
+            </ol>
+        </li>
+    </ol>
+
+    <h1>Definitie lijsten</h1>
+
+    <dl>
+        <dt>Ongenummerde lijsten</dt>
+        <dd>Ongenummerde lijsten worden weergegeven met de tag &lt;ul&gt;, elk item met &lt;li&gt;.</dd>
+        <dt>Genummerde lijsten</dt>
+        <dd>Genummerde lijsten worden weergegeven met de tags &lt;ol&gt;, elk item met &lt;li&gt;</dd>
+        <dt>Opties voor genummerde lijsten</dt>
+        <dd>Je kunt de attributen style en start meegeven met de &lt;ol&gt; tag.</dd>
+        <dd>Je kunt het attrubuut value meegeven met de &lt;li&gt; tag.</dd>
+        <dt>Ongenummerde lijsten met subonderwerp</dt>
+        <dd>Sublijsten krijgen automatisch een ander opsommingsteken</dd>
+        <dt>Geneste lijsten</dt>
+        <dd>Je kunt tags &lt;ol&gt; en &lt;ul&gt; combineren.</dd>
+    </dl>
+
+
+
+    
+</body>
+</html>
