@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl-be">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oefening4</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <legend>Persoonlijke gegevens</legend>
+        <table border="2">
+        <tr>
+            <td><label for="Naam">Naam:</label></td>
+            <td><input type="text" name="Naam" id="Naam" required></td>
+            <td><label for="Voornaam">Voornaam:</label></td>
+            <td><input type="text" name="Voornaam" id="Voornaam"></td>
+
+        </tr>
+        <tr>
+            <td><label for="Adres">Adres:</label></td>
+            <td colspan="3"><textarea name="Adres" id="Adres" cols="50" rows="2"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="Postcode">Postcode:</label></td>
+            <td><input type="text" name="Postcode" id="Postcode" size="4" maxlength="4"></td>
+            <td><label for="Gemeente">Gemeente:</label></td>
+            <td><input type="text" name="Gemeente" id="Gemeente"></td>
+        </tr>
+        <tr>
+            <td><label for="Emailadres">Email adres:</label></td>
+            <td colspan="3"><input type="email" name="Emailadres" id="Emailadres" value="@student.ucll.be" size="50" required ></td>
+        </tr>
+        <tr>
+            <td><label for="Website">Website:</label></td>
+            <td colspan="3"><input type="url" name="Website" id="Website" size="50" placeholder="Website van je bedrijf"></td>
+        </tr>
+        <tr>
+            <td><label for="Geboortedatum">Geboortedatum:</label></td>
+            <td><input type="date" ></td>
+            <td><label for="AantalKinderen">Aantal Kinderen:</label></td>
+            <td><input type="number" name="AantalKinderen" id="AantalKinderen"></td>
+        </tr>
+        <tr>
+            <td>Geslacht:</td>
+            <td colspan="3"><input type="radio" name="Geslacht" value="Man"><label for="Man">Man</label>
+                <input type="radio" name="Geslacht" value="Vrouw"><label for="Vrouw">Vrouw</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="checkbox" name="ContactEmail" checked><label for="ContactEmail">Wij mogen u per e-mail contacteren</label></td>
+            <td colspan="2"><input type="checkbox" name="ContactEmail" checked><label for="ContactPost">Wij mogen u per post contacteren</label></td>
+        </tr>
+        
+
+
+
+    </table>
+    
+    </fieldset>
+
+    <fieldset>
+        <legend>Opdracht</legend>
+
+        <table border="2">
+            <tr>
+                <td><label for="Uploaden">Uploaden:</label></td>
+                <td><input type="file" name="Uploaden" id="Uploaden"></td>
+                <td><label for="Paswoord">Paswoord:</label></td>
+                <td><input type="password" name="Paswoord" id="Paswoord"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select name="Keuzedropdown" id="Keuzedropdown">
+                        <option value="Keuze1">Keuze1</option>
+                        <option value="Keuze2">Keuze2</option>
+                        <option value="Keuze3">Keuze3</option>
+                        <option value="Keuze4">Keuze4</option>
+                        <option value="Keuze5">Keuze5</option>
+                    </select></td>
+                <td colspan="2">
+                    <select name="Keuzelist" id="Keuzelist" size="3" multiple>
+                        <option value="Keuze6" selected>Keuze6</option>
+                        <option value="keuze7">Keuze7</option>
+                        <option value="keuze8">Keuze8</option>
+                        <option value="keuze9">Keuze9</option>
+                        <option value="keuze10">Keuze10</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="Zoeken">Zoeken:</label></td>
+                <td colspan="3"><input type="search" name="Zoeken" id="Zoeken"></td>
+            </tr>
+            <tr>
+                <td><label for="Achtergrondkleur">Achtergrondkleur:</label></td>
+                <td><input type="color" name="Achtergrondkleur" id="Achtergrondkleur"></td>
+                <td><label for="Afwijking">Afwijking:</label></td>
+                <td><input type="range" min="0" max="255"></td>
+            </tr>
+
+        </table>
+
+
+    </fieldset>
+
+    <input type="submit" value="Verstuur">
+    <input type="reset" value="Maak leeg">
+
+    </form>
+    
+</body>
+</html>
