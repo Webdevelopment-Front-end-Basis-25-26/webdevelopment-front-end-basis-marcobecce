@@ -1,0 +1,138 @@
+body{background-color: rgb(244, 141, 248);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+h2{
+    font-size: 1.25em;
+
+
+}
+
+#boven h2{
+    font-size: 1.75em;
+    text-align: center;
+
+
+}
+#boven a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+#boven nav a{
+    background-color: darkcyan;
+    color: lightsalmon;
+}
+#boven nav a:hover{
+    background-color: darkblue;
+}
+#boven nav a:active{
+    color: lightpink
+}
+#boven nav a::before{
+    content: url(images/link.png);
+}
+#boven nav a:first-child{
+    font-weight: bold;
+}
+#boven nav a~a {
+    font-style: italic;
+}
+#boven nav a:visited{
+    color: blue;
+
+}
+
+
+body>p{
+    text-transform: uppercase;
+    font-size: 1em;
+
+}
+body>p::first-letter{
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+div >p::first-letter{
+    font-style: italic;
+    font-size: 1.75em;
+}
+h2 + p {
+    text-indent: 2em;
+
+}
+h2 + p::first-line {
+    font-style: italic;
+    
+}
+
+
+ul>li li::before{
+    content: none;
+}
+ul>li{
+    color: green;
+    list-style-type: none;
+
+}
+ul>li+li{
+    color:red;
+}
+ul>li li{
+    color: blue;
+    list-style-type: square;
+}
+ul>li::before{
+    content: url(images/clipboard.png);
+}
+ul>li:hover ul>li+li{
+    list-style-type: circle;
+}
+ul>li:hover ul>li{
+list-style-type: disc;
+}
+input[type="text"]{
+    font-size: 1em;
+}
+
+input[name="naam"]{
+    background-color: #FF1111;
+}
+input[name="voornaam"]{
+    background-color:#1111FF ;
+}
+input[name="naam"]:hover{
+    background-color: #991111;
+}
+input[name="voornaam"]:hover{
+    background-color:#111199 ;
+}
+input[type="text"]:focus{
+background-color: #11ff11;
+    
+}
+label[for="tevreden"]{
+    color: #119911;
+}
+label[for="ontevreden"]{
+    color: #991111;
+}
+input[name="tevredenheid"]:checked+label[for="tevreden"]{
+    color: #116611;
+    
+}
+input[name="tevredenheid"]:checked+label[for="ontevreden"]{
+    color:#661111
+}
+footer{
+    font-size: 0.75em;
+    text-align: right;
+}
+
+
+
+
+
