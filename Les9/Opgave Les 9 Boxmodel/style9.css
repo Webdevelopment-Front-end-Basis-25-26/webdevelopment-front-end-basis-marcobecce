@@ -109,3 +109,9 @@ header nav ol li a:hover
     border: 5px outset hsl(192, 45%, 25%);
     border-top-right-radius: 20px;
 }
+#content p
+{
+    border-bottom: 2px dotted hsl(192, 45%, 25%);
+    padding: 10px 0px;
+    margin: 0px 5px;
+}
