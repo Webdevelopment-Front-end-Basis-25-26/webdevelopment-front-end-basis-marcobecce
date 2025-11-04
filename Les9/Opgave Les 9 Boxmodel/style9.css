@@ -115,3 +115,29 @@ header nav ol li a:hover
     padding: 10px 0px;
     margin: 0px 5px;
 }
+#content table
+{
+    text-align: center;
+}
+table
+{
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 4px ridge hsl(192, 45%, 25%);
+
+}
+table th, table td
+{
+    border: 1px solid hsl(192, 45%, 25%);
+    padding: 5px;
+}
+table th
+{
+    font-weight: normal;
+    text-transform: uppercase;
+}
+table tr:hover td
+{
+    background-color: rgb(49, 112, 130, 0.5);
+}
