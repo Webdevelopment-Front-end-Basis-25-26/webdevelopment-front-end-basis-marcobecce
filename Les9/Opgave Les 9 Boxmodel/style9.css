@@ -98,3 +98,14 @@ header nav ol li a:hover
     font-size: 1.5em;
     font-weight: bold;
 }
+#content h2
+{
+    font-size: 1.4em;
+    font-weight: normal;
+    font-style: italic;
+    background-color: hsl(192, 45%, 35%);
+    color: #FFFFFF;
+    padding: 5px;
+    border: 5px outset hsl(192, 45%, 25%);
+    border-top-right-radius: 20px;
+}
