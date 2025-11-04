@@ -85,3 +85,16 @@ header nav ol li a:hover
     height: 214px;
     margin-bottom: 20px;
 }
+#banner p
+{
+    width: 280px;
+    height: 214px;
+    padding: 20px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+#banner p::first-letter
+{
+    font-size: 1.5em;
+    font-weight: bold;
+}
