@@ -33,29 +33,55 @@ header h1
     background-color: #317082;
     color: #FFFFFF;
     font-weight: normal;
+    text-decoration: none;
     padding: 10px 20px 10px 20px;
     text-shadow: 2px 2px #000;
     border-radius: 10px;
-    box-shadow: 2px 2px #317082;
+    box-shadow: 2px 2px 5px #317082;
     margin-bottom: 20px;
 }
-header ol
+header nav
 {
- list-style-type: none;
- 
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-header li
+header nav ol
+{
+    list-style-type: none;
+    display: inline;
+}
+header nav ol li
 {
     background-color: #317082;
-    display: inline-block;
+    display: inline;
+    padding: 5px 10px;
     border-top-left-radius: 10px 5px;
     border-top-right-radius: 10px 5px;
     border-bottom-left-radius: 10px 5px;
     border-bottom-right-radius: 10px 5px;
-    
 }
-header li a
+header nav ol li a
 {
     text-decoration: none;
     color: white
+}
+header nav ol:hover
+{
+    background-color: #000;
+}
+header nav ol:hover li a
+{
+    color: #000;
+}
+header nav ol li a:hover 
+{
+    color: #FFFFFF;
+}
+#banner
+{
+    background-image:url(images/banner.jpg);
+    width: 905px;
+    height: 214px;
+    margin-bottom: 20px;
 }
