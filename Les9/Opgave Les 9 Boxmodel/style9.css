@@ -159,7 +159,9 @@ textarea
 {
     border: 2px solid hsl(192,45%,25%);
     padding: 5px;
-    border-radius: 10px/5px
+    border-radius: 10px/5px;
+    margin: 5px;
+    box-shadow: inset 0 0 4px #000;
 
 }
 input[type="submit"]
@@ -171,4 +173,19 @@ input[type="submit"]
     font-weight: bold;
     text-transform: capitalize;
     box-shadow: 5px 5px 0px #317082;
+    margin: 5px;
 }
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea
+{
+    box-shadow: inset 0 0 8px #000;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea
+{
+    background-color: rgb(49, 112, 130, 0.5);
+    box-shadow: inset 0 0 8px #000;
+}
+
