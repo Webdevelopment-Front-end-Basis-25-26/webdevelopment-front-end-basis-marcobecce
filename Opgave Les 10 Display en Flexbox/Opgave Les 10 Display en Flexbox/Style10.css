@@ -136,6 +136,7 @@ fieldset legend
 input[type="text"],
 input[type="email"],
 input[type="multiline"],
+input[type="submit"],
 textarea
 {
     border: 1px solid #555;
@@ -156,5 +157,38 @@ fieldset form label
     width: 120px;
     text-align: right;
 
+}
+fieldset form div label:first-of-type
+{
+    width: 120px;
+    text-align: right;
+    padding-right: 10px;
+}
+fieldset form div:last-child
+{
+    display: flex;
+    justify-content: right;
+}
+input[type="radio"] + label 
+{
+    width: auto;
+    text-align: left;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+footer
+{
+    background-image: url(images/header.jpg);
+    background-position: center bottom;
+    margin: 10px;
+    padding: 10px;
+    text-align: right;
+    
+}
+footer a
+{
+    color: white;
+    text-decoration: none;
 }
 
