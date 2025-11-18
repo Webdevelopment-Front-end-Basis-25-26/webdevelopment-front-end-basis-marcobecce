@@ -1,0 +1,33 @@
+* {
+
+ margin: 0;
+
+ padding: 0;
+
+ box-sizing: border-box;
+
+}
+
+body {
+
+ font-family: Helvetica, Tahoma, Arial, sans-serif;
+
+ background-color: rgb(147, 162, 243);
+
+}
+
+input, textarea {
+
+ font-family: inherit;
+
+ font-size: 1em;
+
+}
+.container
+{
+    background-color: white;
+    width: 790px;
+    text-align: center;
+    margin: 10px 0px;
+
+}

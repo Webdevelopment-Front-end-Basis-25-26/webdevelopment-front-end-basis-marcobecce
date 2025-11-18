@@ -1,0 +1,127 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: rgb(255, 199, 1, 0.4);
+}
+.container
+{
+    background-color: white;
+    min-width: 600px;
+    max-width: 1092px;
+    margin: auto;
+
+    
+}
+header
+{
+    min-height: 300px;
+    background-image: url(images/black_friday.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    
+}
+header h1
+{
+    font-family: "Lucida Handwriting", Tahoma, Arial, sans-serif;
+    font-weight: bold;
+    color: #00222e;
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 2px 2px 1px #ffc701;
+    max-width: 40%;
+    position: absolute;
+    top: 40px;
+    right: 140px;
+}
+button
+{
+    background-color: #f08f00;
+    color: #00222e;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #00222e;
+    box-shadow: 3px 3px 3px #00222e;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+button .uitleg
+{
+    background-color: #FFFFFF;
+    color: #00222e;
+    font-size: 0.75em;
+    width: 14em;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px #00222e;
+    font-weight: normal;
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 20%;
+
+}
+
+button:hover .uitleg
+{
+    display: block;
+}
+
+nav 
+{
+    margin: 10px;
+}
+ 
+nav a,
+nav li,
+aside a,
+aside li 
+{
+    text-decoration: none;
+    list-style-type: none;
+    color: #00222e;
+}
+
+nav a
+{
+    display: inline-block;
+    background-color: #f08f00;
+    width: 140px;
+    padding: 10px;
+}
+nav a:hover
+{
+    background-color: #ffc701;
+}
+
+nav ol
+{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+nav ol li ol
+{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+nav ol li:hover ol
+{
+    display: block;
+    
+}
+
