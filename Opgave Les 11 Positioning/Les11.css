@@ -125,3 +125,36 @@ nav ol li:hover ol
     
 }
 
+
+
+aside ul li ul li
+{
+    display: none;
+}
+aside ul li:hover ul li 
+{
+    display: block;
+}
+
+aside > ul li > a
+{
+    background-color: #ffc701;
+    border: 1px solid #00222e;
+    width: 120px;
+    display: block;
+    padding: 10px;
+}
+.content-container
+{
+    position: relative;
+}
+aside ul li > ul > li > a
+{
+    position: absolute;
+    gap:5px;
+    right: 10px;
+
+}
+
+
+
