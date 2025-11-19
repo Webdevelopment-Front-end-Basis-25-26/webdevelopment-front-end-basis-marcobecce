@@ -127,34 +127,87 @@ nav ol li:hover ol
 
 
 
-aside ul li ul li
+
+
+
+aside ul {
+    position: absolute;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    top: 0;
+    
+    
+}
+aside ul li
+{
+    position: relative;
+
+    
+}
+
+
+aside ul li > ul
 {
     display: none;
+    position: absolute;
+    top: 0px;
+    right: 100%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
-aside ul li:hover ul li 
+aside ul li:hover > ul 
 {
     display: block;
 }
 
-aside > ul li > a
+aside ul li > a
 {
     background-color: #ffc701;
     border: 1px solid #00222e;
     width: 120px;
-    display: block;
     padding: 10px;
+    display: block;
+    
+}
+
+aside ul li > ul > li > a
+{
+
+    display: block;
+    background-color: #ffc701;
+    border: 1px solid #00222e;
+    width: 120px;
+    padding: 10px;
+    text-decoration: none;
+
 }
 .content-container
 {
     position: relative;
 }
-aside ul li > ul > li > a
+#content
 {
-    position: absolute;
-    gap:5px;
-    right: 10px;
+    margin-right: 140px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 
 }
-
-
+#content p
+{
+    margin: 5px 0;
+}
+footer
+{
+    font-size: 0.75em;
+    font-style: italic;
+    text-align: right;
+    padding: 5px;
+    background-image: url(images/black_friday.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
