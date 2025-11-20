@@ -76,17 +76,33 @@ header {
 
     transition: opacity 0.7s;
 }
-.image-hover-over div {
-    background-color: #002757;
-    color: white;
-    padding: 10px 20px;
-}
 .image-hover-over img
 {
     width: 100%;
     display: block;
 
-    transition: opacity 0.3;
+    transition: opacity 0.7s;
+}
+.image-hover-over:hover img
+{
+    opacity: 30%;
+}
+.image-hover-over:hover div
+{
+    opacity: 1;
+}
+
+.image-hover-over div
+{
+    background-color: #002757;
+    color: white;
+    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: opacity 0.7s;
+    opacity: 0;
 }
 header h1
 {
@@ -101,4 +117,30 @@ header:hover h1
 header:hover .image-hover-over
 {
     opacity: 1;
+}
+body p
+{
+    background-color: #0066DD;
+    color: #DD6600;
+    padding: 10px;
+    height: 40px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+body > p span
+{
+    position: relative;
+    display: inline-block;
+    animation: scrolltext 6s linear infinite;
+
+}
+
+@keyframes scrolltext 
+{
+    from {transform: translateX(-10%);}
+    to { transform: translateX(110%);}
 }
