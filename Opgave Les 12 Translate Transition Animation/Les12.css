@@ -125,7 +125,7 @@ body p
     padding: 10px;
     height: 40px;
     overflow: hidden;
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
@@ -133,6 +133,7 @@ body p
 }
 body > p span
 {
+    width: 100%;
     position: relative;
     display: inline-block;
     animation: scrolltext 6s linear infinite;
@@ -144,3 +145,29 @@ body > p span
     from {transform: translateX(-10%);}
     to { transform: translateX(110%);}
 }
+nav {
+    margin: 10px;
+}
+ 
+nav a {
+    background-color: #002757;
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    display: inline-block;  
+    
+}
+nav a:hover
+{
+    animation: wiggle 0.4s ease;
+}
+@keyframes wiggle
+{
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(5deg);}
+    50% {transform: rotate(-5deg);}
+    75% {transform: rotate(3deg);}
+    100% {transform: rotate(0deg);}
+}
+
+
