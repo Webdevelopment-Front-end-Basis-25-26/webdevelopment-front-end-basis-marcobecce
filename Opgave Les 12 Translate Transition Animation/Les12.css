@@ -159,9 +159,9 @@ nav a {
 }
 nav a:hover
 {
-    animation: wiggle 0.4s ease;
+    animation: wiebel 0.4s ease;
 }
-@keyframes wiggle
+@keyframes wiebel
 {
     0% {transform: rotate(0deg);}
     25% {transform: rotate(5deg);}
