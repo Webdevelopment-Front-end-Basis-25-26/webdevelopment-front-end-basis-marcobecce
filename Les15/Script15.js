@@ -79,53 +79,141 @@ document.getElementById("oefening2").onclick = function ()
 }
 
 
-function demonstreerVarVsLet() 
-{
-    let resultaatDiv = document.getElementById("resultaat3");
-    resultaatDiv.innerHTML = "<h3>Verschil tussen var en let:</h3>";
- 
- 
-    // Voorbeeld 1: Block scope
-    resultaatDiv.innerHTML += "<strong>1. Block Scope:</strong><br>";
-    if (true) {
-        var varGetal = 10;
-        let letGetal = 20;
-    }
-    resultaatDiv.innerHTML += "var buiten block: " + varGetal + "<br>";
-    resultaatDiv.innerHTML += "let buiten block:" + letGetal + "<br>"; 
-    resultaatDiv.innerHTML += "let buiten block: niet toegankelijk (ReferenceError)<br><br>";
- 
- 
-    // Voorbeeld 2: Loop scope probleem met var
-    resultaatDiv.innerHTML += "<strong>2. Loop Scope Probleem:</strong><br>";
-    for (var i = 0; i < 3; i++) {
-        setTimeout(function () {
-            console.log("var i:", i); // Print altijd 3!
-            resultaatDiv.innerHTML += "var i in timeout: " + i + "<br>"; // wordt pas geprint na timeout
-        }, 100);
-    }
-    resultaatDiv.innerHTML += "var i na loop: " + i + "<br>";
- 
- 
-    for (let j = 0; j < 3; j++) {
-        setTimeout(function () {
-            console.log("let j:", j); // Print 0, 1, 2
-            resultaatDiv.innerHTML += "var j in timeout: " + j + "<br>"; // wordt pas geprint na timeout
-        }, 100);
-    }
-    resultaatDiv.innerHTML += "let j na loop:" + j +"<br>";
-    resultaatDiv.innerHTML += "let j na loop: niet toegankelijk (ReferenceError)<br><br>";
+document.getElementById("oefening3").addEventListener("click", () => {
+	demonstreerVarVsLet();
+});
+
+function demonstreerVarVsLet() {
+	let resultaatDiv = document.getElementById("resultaat3");
+	resultaatDiv.innerHTML = "<h3>Verschil tussen var en let:</h3>";
+
+	
+	resultaatDiv.innerHTML += "<strong>1. Block Scope:</strong><br>";
+	if (true) {
+		var varGetal = 10;
+		let letGetal = 20;
+	}
+	resultaatDiv.innerHTML += "var buiten block: " + varGetal + "<br>";
+	
+	resultaatDiv.innerHTML += "let buiten block: niet toegankelijk (ReferenceError)<br><br>";
+
+	
+	resultaatDiv.innerHTML += "<strong>2. Loop Scope Probleem:</strong><br>";
+	for (var i = 0; i < 3; i++) {
+		setTimeout(function () {
+			console.log("var i:", i); 
+			resultaatDiv.innerHTML += "var i in timeout: " + i + "<br>"; 
+		}, 100);
+	}
+	resultaatDiv.innerHTML += "var i na loop: " + i + "<br>";
+
+	for (let j = 0; j < 3; j++) {
+		setTimeout(function () {
+			console.log("let j:", j); 
+			resultaatDiv.innerHTML += "var j in timeout: " + j + "<br>"; 
+		}, 100);
+	}
+	
+	resultaatDiv.innerHTML += "let j na loop: niet toegankelijk (ReferenceError)<br><br>";
 }
 
 
 
 
-
-document.getElementById("oefening3").onclick = function()
+function getFizzBuzzWaarde(getal) 
 {
+	if (getal % 3 === 0 && getal % 5 === 0) {
+		return "FizzBuzz";
+	} else if (getal % 3 === 0) {
+		return "Fizz";
+	} else if (getal % 5 === 0) {
+		return "Buzz";
+	} else {
+		return getal;
+	}
+}
 
+document.getElementById("oefening4").onclick = function()
+{
+    let tot = vraagGetalInBereik("Tot welk getal wil je FizzBuzz spelen? (1-100)", 1, 100);
+
+    let resultaat = "";
+	for (let i = 1; i <= tot; i++) {
+		const waarde = getFizzBuzzWaarde(i);
+		resultaat += i + " : " + waarde + "<br>";
+	}
+	document.getElementById("resultaat4").innerHTML = resultaat;
 
 }
+
+function toonPriemgetallen(van, tot) {
+	let resultaat = "";
+	let aantalPriemen = 0;
+
+	for (let i = van; i <= tot; i++) {
+		if (isPriem(i)) {
+			if (aantalPriemen > 0) {
+				resultaat += ", ";
+			}
+			resultaat += i;
+			aantalPriemen++;
+		}
+	}
+
+	return resultaat;
+}
+
+
+function isPriem(getal) {
+	if (getal < 2) return false;
+	if (getal === 2) return true;
+	if (getal % 2 === 0) return false;
+
+	// Check alleen oneven delers tot getal
+	for (let i = 3; i < getal; i += 2) {
+		if (getal % i === 0) return false;
+	}
+
+	return true;
+}
+
+
+function toonPriemgetallen(van, tot) {
+	let resultaat = "";
+	let aantalPriemen = 0;
+
+	for (let i = van; i <= tot; i++) {
+		if (isPriem(i)) {
+			if (aantalPriemen > 0) {
+				resultaat += ", ";
+			}
+			resultaat += i;
+			aantalPriemen++;
+		}
+	}
+
+	return resultaat;
+}
+
+
+document.getElementById("oefening5").onclick = function() {
+	const getal = vraagGetalInBereik("Geef een getal tussen 1 en 100:", 1, 100);
+
+	let resultaat = "<strong>Getal: " + getal + "</strong><br>";
+
+	
+	if (isPriem(getal)) {
+		resultaat += getal +" is een <span style='color: green;'>priemgetal</span>!<br><br>";
+	} else {
+		resultaat += getal + " is <span style='color: red;'>geen priemgetal</span>.<br><br>";
+	}
+
+	
+	resultaat += "Priemgetallen van 2 tot "+ getal + ":<br>";
+	resultaat += toonPriemgetallen(2, getal);
+
+	document.getElementById("resultaat5").innerHTML = resultaat;
+};
 
 
 
