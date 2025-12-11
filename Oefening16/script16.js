@@ -15,12 +15,12 @@ function Message(text) {
 
 document.getElementById("addIngredient").onclick = function () {
 
-    var input = ingredientInput.value.toLowerCase();
+    var input = ingredientInput.value;
 
     if (input === "") {
         Message("Voer een ingrediënt in!");
     }
-    else if(ingredientenArray.includes(input))
+    else if(ingredientenArray.includes(input.toLowerCase()))
         {
             Message(input + " staat al in de lijst.");
         }
