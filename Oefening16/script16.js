@@ -9,26 +9,25 @@ function Message(text) {
 
 }
 
-function bestaatAl(Input)
-{
-    ingredientenArray.forEach(item =>
-        {
-            
-        })
-}
-
 
 
 
 
 document.getElementById("addIngredient").onclick = function () {
-    if (ingredientInput.value === "") {
+
+    var input = ingredientInput.value.toLowerCase();
+
+    if (input === "") {
         Message("Voer een ingrediënt in!");
     }
+    else if(ingredientenArray.includes(input))
+        {
+            Message(input + " staat al in de lijst.");
+        }
     else {
-        ingredientenArray.push(ingredientInput.value);
-        Message(ingredientInput.value + " toegevoegd!");
-        ingredientInput.value = "";
+        ingredientenArray.push(input);
+        Message(input + " toegevoegd!");
+        input = "";
 
     }
 }
