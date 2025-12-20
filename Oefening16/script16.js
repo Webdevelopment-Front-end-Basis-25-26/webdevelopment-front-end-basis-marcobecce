@@ -67,7 +67,7 @@ document.getElementById("addPizza").onclick = function () {
         };
 
         pizzaArray.push(pizza);
-        MessagePizza("Pizza " + pizza.naam + " toegevoegd!" )
+        MessagePizza("Pizza " + pizza.naam + " toegevoegd!")
 
         document.getElementById("pizzaNaam").value = "";
         document.getElementById("pizzaPrijs").value = "";
@@ -76,15 +76,46 @@ document.getElementById("addPizza").onclick = function () {
 
     }
 
-        document.getElementById("showPizzas").onclick = function()
-        {
-            if(pizzaArray.length === 0 )
-                {
-                    MessagePizza("Nog geen pizza's toegevoegd");
-                }
-            else
-                {
-                    
-                }
+    document.getElementById("showPizzas").onclick = function () {
+        if (pizzaArray.length === 0) {
+            MessagePizza("Nog geen pizza's toegevoegd");
         }
+        else {
+            MessagePizza(toonPizzaTabel(pizzaArray))
+        }
+    }
+
+
+    function toonPizzaTabel(pizzas) {
+        var html = "<table>";
+
+        var eerste = pizzas[0];
+        var keys = Object.keys(eerste);
+        html += "<tr>";
+        for (var i = 0; i < keys.length; i++) {
+            var key = keys[i];
+            html += "<th>" + key +"</th>";
+        }
+        html += "<th>subtotaal</th>";
+        html += "</tr>";
+
+        for (var r = 0; r < pizzas.length; r++) {
+            var p = pizzas[r];
+            html += "<tr>";
+            for (var k = 0; k < keys.length; k++) {
+                var naam = keys[k];
+                html += "<td>"+ keys + "</td>";
+            }
+
+            var prijs = Number(p.price) || 0;
+            var aantal = Number(p.amount) || 0;
+            var subtotaal = (prijs * aantal).toFixed(2);
+            html += "<td>" + subtotaal.innerText + "</td>";
+
+            html += "</tr>";
+        }
+
+        html += "</table>";
+        return html;
+    }
 }
